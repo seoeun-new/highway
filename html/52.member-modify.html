@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+    <!-- container -->
+    <div class="container">
+      <ul class="path">
+        <li>홈</li>
+        <li>마이페이지</li>
+        <li>회원정보 변경</li>
+      </ul>
+      <!-- snb-wrap -->
+      <script>
+        $.get("common/snb.html", function (data) {
+          $(data).insertBefore('.content');
+        });
+      </script>
+      <!-- // snb-wrap -->
+      <main class="content">
+        <div class="data-top line-b-st2">
+          <h3 class="title-main">회원정보 변경</h3>
+        </div>   
+        
+        <!-- 기본 정보 -->
+        <div class="data-top">
+          <h3 class="title-subject">기본 정보</h3>
+          <div class="right">
+            <p class="txt-important"><span class="star">*</span>표시는 반드시 입력하셔야 하는 항목입니다.</p>
+          </div>
+        </div>
+          
+        <table class="table-type1 st2">
+          <colgroup>
+              <col style="width:180px">
+              <col style="width:auto;">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>아이디<span class="star">*</span></th>
+              <td>
+                <input type="text" style="width:380px">
+              </td>
+            </tr>
+            <tr>
+              <th>비밀번호<span class="star">*</span></th>
+              <td>
+                <div class="block row">
+                  <button type="button" class="btn-type7 st2 st-arr" onclick="$('.password-change').toggle();" data-evt=pop-tooltip>비밀번호 변경</button>
+                  <!-- pop-tooltip-wrap -->
+                  <div class="pop-tooltip-wrap">
+                    <button type="button" class="btn-type7 st2 st-arr" data-evt=pop-tooltip>비밀번호 도움말</button>
+                    <div class="pop-tooltip">
+                      <a href="javascript:void(0);" class="close"></a>
+                      <div class="pop-header"><strong class="tit">비밀번호 도움말</strong></div>
+                      <div class="pop-body">
+                        <div class="pw_advice_list">
+                          <ul>
+                              <li>영문대소문자는 구분이 되며, 한가지 문자로만 입력은 위험합니다.</li>
+                              <li><strong>사용가능 특수문자 :</strong> <strong class="c-red">!@#$%^&amp;*()_+-=`~</strong></li>
+                              <li>ID/주민번호/생일/전화번호 등의 개인정보와 통상 사용 순서대로의 <br>3자 이상 연속 사용은 피해주세요.
+                                  <br>비밀번호는 주기적으로 바꾸어 사용하시는 것이 안전합니다.</li>
+                          </ul>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- // pop-tooltip-wrap -->
+                </div>
+                <div class="password-change" style="display:none">
+                  <dl>
+                    <dt>현재 비밀번호</dt>
+                    <dd><input type="password" style="width: 260px;"></dd>
+                  </dl>
+                  <dl>
+                    <dt>새 비밀번호</dt>
+                    <dd><input type="password" style="width: 260px;"></dd>
+                  </dl>
+                  <dl>
+                    <dt>새 비밀번호 확인</dt>
+                    <dd><input type="password" style="width: 260px;"></dd>
+                  </dl>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>이름<span class="star">*</span></th>
+              <td>
+                <input type="text" style="width:380px">
+              </td>
+            </tr>
+            <tr>
+              <th>휴대폰번호<span class="star">*</span></th>
+              <td>
+                <div class="row">
+                  <input type="text" style="width:190px;" disabled value="000-0000-0000"> <button type="button" class="btn-type5 st7">휴대폰 인증</button>
+                </div>
+                <div class="block">
+                  <label class="inp-chk">
+                    <input type="checkbox"><span class="ic"></span>
+                      <span class="t">정보/이벤트 SMS 수신에 동의합니다.</span> 
+                    </label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>주소<span class="star">*</span></th>
+              <td>
+                <div class="inp-address">
+                  <div class="row">
+                    <input type="text" style="width:190px;" disabled> <button type="button" class="btn-type5 st7">우편번호검색</button>
+                  </div>
+                  <div class="row">
+                    <input type="text" style="width:380px;" disabled>
+                  </div>
+                  <div class="row">
+                    <input type="text" style="width:380px;" disabled>
+                  </div>
+                  <div class="row">
+                    <div class="addr-txt">
+                      <em>수지성복점</em>
+                      <span>배달 가능 지역입니다.</span>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- 부가 정보 -->
+        <div class="data-top">
+          <h3 class="title-subject">부가 정보</h3>
+        </div>
+          
+        <table class="table-type1 st2">
+          <colgroup>
+              <col style="width:180px">
+              <col style="width:auto;">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>생일</th>
+              <td>
+                <div class="row">
+                  <select style="min-width: 100px;">
+                    <option>년</option>
+                    <option>1980</option>
+                    <option>1981</option>
+                  </select>
+                  <select style="min-width: 80px;">
+                    <option>월</option>
+                    <option>1</option>
+                    <option>2</option>
+                  </select>
+                  <select style="min-width: 80px;">
+                    <option>일</option>
+                    <option>1</option>
+                    <option>2</option>
+                  </select>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="btn-wrap center mg-lg">
+          <a href="javascript:void(0);" class="btn-type3 st2">취소</a>
+          <a href="javascript:void(0);" class="btn-type3 st1">정보수정</a>
+         </div>
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+</body>
+</html>

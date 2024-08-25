@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+    <!-- container -->
+    <div class="container">
+      <ul class="path">
+        <li>홈</li>
+        <li>마이페이지</li>
+        <li>정기배송</li>
+      </ul>
+      <!-- snb-wrap -->
+      <script>
+        $.get("common/snb.html", function (data) {
+          $(data).insertBefore('.content');
+        });
+      </script>
+      <!-- // snb-wrap -->
+      <main class="content">
+        <!-- mypage-info-wrap -->
+        <div class="mypage-info-wrap">
+          <div class="info-desc">
+              <p class="txt">이재욱님의
+                <br>회원등급은 일반회원등급 입니다.</p>
+              <!-- pop-tooltip-wrap -->
+              <div class="pop-tooltip-wrap">
+                <button type="button" class="btn-type7 st2 st-arr" data-evt=pop-tooltip>등급혜택보기</button>
+                <div class="pop-tooltip">
+                  <a href="javascript:void(0);" class="close"></a>
+                  <div class="pop-header"><strong class="tit">등급혜택 안내</strong></div>
+                  <div class="pop-body">
+                    <div class="grade-list">
+                      <dl>
+                          <dt>회원 등급</dt>
+                          <dd>일반회원등급</dd>
+                      </dl>
+                      <dl>
+                          <dt>추가 할인</dt>
+                          <dd><strong>0원이상 구매시 상품 판매금액의 0.0% 추가 할인</strong></dd>
+                      </dl>
+                      <dl>
+                          <dt>중복 할인</dt>
+                          <dd><strong>0원이상 구매시 상품 판매금액의 0.0% 추가 할인</strong></dd>
+                      </dl>
+                      <dl>
+                          <dt>추가  적립</dt>
+                          <dd>0원이상 구매 시 구매금액당 0.0% 추가 적립</dd>
+                      </dl>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <!-- // pop-tooltip-wrap -->
+          </div>
+          <div class="my-wallet">
+            <ul>
+              <li>
+                <div class="icon"><img src="../images/common/ico-coupon.png" alt=""></div>
+                <dl>
+                  <dt>쿠폰</dt>
+                  <dd><b>0</b><span>장</span></dd>
+                </dl>
+              </li>
+              <li>
+                <div class="icon"><img src="../images/common/ico-mileage.png" alt=""></div>
+                <dl>
+                  <dt>마일리지</dt>
+                  <dd><b>0</b><span>원</span></dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- // mypage-info-wrap -->        
+        
+        <div class="data-top">
+          <h3 class="title-subject">내 정기 배송 상품</h3>
+          <div class="right">
+            <button class="btn-type7 st7">정기배송 신청 취소 변경 요청</button>
+          </div>
+        </div>
+        <table class="table-type1">
+          <colgroup>
+              <col style="width:50px">
+              <col style="width:auto">
+              <col style="width:200px">
+              <col style="width:150px">
+              <col style="width:150px">
+          </colgroup>
+          <thead>
+          <tr>
+              <th>
+                <label class="inp-chk">
+                  <input type="checkbox" name="chk" data-evt="all-chk"><span class="ic"></span>
+                </label>
+              </th>
+              <th>상품/옵션 정보</th>
+              <th>상품금액/수량</th>
+              <th>정기배송 혜택</th>
+              <th>합계금액</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label class="inp-chk">
+                  <input type="checkbox" name="chk"><span class="ic"></span>
+                </label>
+              </td>
+              <td>
+                <div class="order-product">
+                  <div class="product">
+                    <div class="img"><img src="../images/temp/temp-product-detail.png" alt=""></div>
+                    <div class="item"><span class="name">푸르밀 딸기 우유 225ml*4</span></div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="row align-c"><b>29,000원</b> / 1개</div>
+                <div class="row align-c"><button class="btn-type7 st5">옵션/수량변경</button></div>
+              </td>
+              <td><b>-100원</b></td>
+              <td><b>29,000원</b></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="price-sub-box">
+          <div class="price-sum-list">
+            <dl>
+                <dt>총 상품금액</dt>
+                <dd><b>29,000</b><span>원</span></dd>
+            </dl>
+            <i class="ico-plus"></i>
+            <dl>
+                <dt>유료회원할인</dt>
+                <dd><b>0</b><span>원</span></dd>
+            </dl>
+            <i class="ico-plus"></i>
+            <dl>
+                <dt>정기배송할인</dt>
+                <dd><b >2,500</b><span>원</span></dd>
+            </dl>
+            <i class="ico-plus"></i>
+            <dl>
+                <dt>배송비</dt>
+                <dd><b >10</b><span>원</span></dd>
+            </dl>
+            <i class="ico-total"></i>
+            <dl class="price-total">
+                <dt>합계</dt>
+                <dd><b>31,500</b><span>원</span></dd>
+            </dl>
+          </div>
+        </div>        
+        <!-- // price-sub-box -->
+
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+</body>
+</html>

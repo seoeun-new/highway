@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+    <!-- container -->
+    <div class="container">
+      <main class="content">
+        <ul class="path">
+          <li>홈</li>
+          <li>본인인증</li>
+        </ul>
+        
+        <div class="member-box-wrap">
+          <h2 class="title-main">비밀번호 찾기</h2>
+          <div class="member-box">
+            <h3 class="title-subject">휴대폰 본인인증</h3>
+            <p class="tit-sub line-b">회원님의 소중한 개인정보 보호를 위하여 본인확인이 필요합니다.</p>
+            <div class="iput-form">
+              <div class="form">
+                <ul>
+                  <li>
+                    <input type="text" placeholder="휴대폰 번호">
+                    <button type="button" class="btn-type4 st7">인증번호받기</button>
+                  </li>
+                  <li>
+                    <input type="text" placeholder="인증번호">
+                    <button type="button" class="btn-type4 st4">인증번호 확인</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="btn-wrap">
+              <a href="javascript:void(0);" class="btn-type3 st1">다음</a>
+            </div>
+          </div>
+        </div>
+
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+    <!-- container -->
+    <div class="container">
+      <main class="content">
+        <div class="cotent-header">
+          <h2 class="title-main">광고·제휴게시판</h2>
+        </div>
+
+          
+        <table class="table-type1 st2">
+          <colgroup>
+              <col style="width:180px">
+              <col style="width:auto;">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>업체명<span class="star">*</span></th>
+              <td>
+                <input type="text" style="width:320px">
+              </td>
+            </tr>
+            <tr>
+              <th>담당자 성함<span class="star">*</span></th>
+              <td>
+                <input type="text" style="width:320px">
+              </td>
+            </tr>
+            <tr>
+              <th>담당자 이메일</th>
+              <td>
+                <input type="text" style="width:320px">
+              </td>
+            </tr>
+            <tr>
+              <th>담당자 전화번호<span class="star">*</span></th>
+              <td>
+                <input type="text" style="width:320px">
+              </td>
+            </tr>
+            <tr>
+              <th>비밀번호<span class="star">*</span></th>
+              <td>
+                <input type="password" style="width:320px">
+              </td>
+            </tr>
+            <tr>
+              <th>제목<span class="star">*</span></th>
+              <td>
+                <input type="text" style="width:320px">
+              </td>
+            </tr>
+            <tr>
+              <th>본문<span class="star">*</span></th>
+              <td>
+                <div class="block">
+                  <label class="inp-chk">
+                    <input type="checkbox"><span class="ic"></span>
+                    <span class="t">비밀글</span>
+                  </label>
+                </div>
+                <div class="editor">에디터영역
+                      <br>에디터영역
+                      <br>에디터영역
+                      <br>에디터영역
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>첨부파일</th>
+              <td>
+                <div class="inp-file-wrap">
+                  <!-- <div class="inp-file">
+                    <div class="trigger">
+                      <div class="input">
+                         <input type="text" class="path">
+                       </div>
+                     <input type="file" class="real">
+                      <button type="button" class="btn-type5 st3">찾아보기</button>
+                    </div>
+                    <button type="button" class="btn-type5 st2">+ 추가</button>
+                    <button type="button" class="btn-type5 st3">삭제</button>
+                  </div> -->
+                </div>                
+              </td>
+            </tr>
+            <tr>
+              <th>자동등록방지</th>
+              <td>
+                <div class="inp-automatic-prevention">
+                  <div class="img"><img src="../images/temp/temp-automatic-prevention.jpg" alt=""></div>
+                  <div class="input-form">
+                    <p class="txt">보이는 순서대로<br>숫자 및 문자를 모두 입력해 주세요.</p>
+                    <input type="text">
+                    <button class="btn-type6 st2"><i class="ico-reset"></i><span>이미지 새로고침</span></button>
+                  </div>
+                </div>
+              </td>
+            </tr>     
+          </tbody>
+        </table>
+
+        <div class="rule-check-box">
+          <h5>비회원 개인정보 수집동의</h5>
+          <div class="rule-box">회사는 비회원의 게시글 등록 시 콘텐츠 등록 및 고객 문의 응대 등을 원활하게 진행하기 위해 아래와 같은 개인정보를 수집하고 있습니다.
+
+            - 수집항목: 이름, 비밀번호,닉네임,휴대폰번호,이메일,IP
+            - 수집/이용목적: 게시글 접수 및 결과 회신
+            - 이용기간: 개인정보 수집 및 이용목적 달성 시 까지
+            
+            원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 
+            단, 관계법령의 규정에 의하여 보전할 필요가 있는 경우 일정기간 동안 개인정보를 보관할 수 있습니다.
+            그 밖의 사항은 (주) 000 개인정보처리방침을 준수합니다.</div>
+            <div class="agree-choice-box">
+              <label class="inp-chk">
+                <input type="checkbox"><span class="ic"></span>
+                <span class="t">비회원 글작성에 대한 개인정보 수집 및 이용동의</span> 
+              </label>
+              <a href="javascript:void(0);" class="link" target="_blank">전체보기</a>
+            </div>
+        </div>
+        <!-- // rule-check-box" -->
+
+        <div class="btn-wrap center mg-lg">
+          <a href="javascript:void(0);" class="btn-type3 st2">이전</a>
+          <a href="javascript:void(0);" class="btn-type3 st1">저장</a>
+         </div>
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+  <!-- header -->
+  <header class="header">
+    <div class="wrapper">
+      <h1 class="logo"><a href="/"><img src="../images/common/logo.png" alt="하이웨이마트"></a></h1>
+      <nav class="gnb-menu">
+        <ul>
+          <li><a href="javascript:void(0);">이벤트/쿠폰</a></li>
+          <li><a href="javascript:void(0);">타임세일</a></li>
+          <li><a href="javascript:void(0);">전단상품</a></li>
+          <li><a href="javascript:void(0);">베스트</a></li>
+          <li><a href="javascript:void(0);">세일중</a></li>
+          <li><a href="javascript:void(0);">식자재</a></li>
+        </ul>
+      </nav>      
+      <div class="right">
+        <ul class="user-menu">
+          <li>
+            <a href="javascript:void(0);" onclick="$('.total-search-layer').toggle()"><i class="ico-search"></i></a>
+              <!-- total-search-layer -->
+              <div class="total-search-layer">
+                <div class="search-area">
+                  <div class="input">
+                    <input type="text" id="search" onkeyup="this.value.length > 0 ? $('#search-del').addClass('on') : $('#search-del').removeClass('on')">
+                    <button class="btn-del" id="search-del" onclick="$('#search').val('');$('#search-del').removeClass('on')"></button>
+                    <button class="btn">검색</button>
+                  </div>
+                  <div class="recent-list">
+                    <b>최근검색어</b>
+                    <ul>
+                      <li>
+                        <a href="javascript:void(0);" class="txt">오이</a>
+                        <span class="date">2024.08.12</span>
+                        <button type="button" class="close"></button>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);" class="txt">자몽트레비</a>
+                        <span class="date">2024.08.12</span>
+                        <button type="button" class="close"></button>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);" class="txt">오이</a>
+                        <span class="date">2024.08.12</span>
+                        <button type="button" class="close"></button>
+                      </li>
+                    </ul>
+                    <p class="no-recent" style="display: none;">최근 검색어가 없습니다.</p>
+                  </div>
+                </div>
+                <div class="layer-menu">
+                  <button type="button" class="delete" onclick="$('.recent-list ul').html('');$('.no-recent').show()">전체삭제</button>
+                  <button type="button" class="close" onclick="$('.total-search-layer').hide()">닫기</button>
+                </div>
+              </div>
+              <!-- // total-search-layer -->
+          </li>
+          <li><a href="javascript:void(0);"><i class="ico-user"></i></a></li>
+          <li><a href="javascript:void(0);"><i class="ico-cart"><span class="num">23</span></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- // header -->
+
+  <div class="quick-menu">
+    <ul>
+      <li><a href="javascript:void(0);"><i class="ico-cart"></i></a></li>
+      <li><a href="javascript:void(0);"><i class="ico-favorite"></i></a></li>
+      <li><a href="javascript:void(0);"><i class="ico-reset-time"></i></a></li>
+    </ul>
+    <a href="javascript:void(0);" class="btn-top"></a>
+  </div>

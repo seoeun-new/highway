@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+
+    <!-- container -->
+    <div class="container">
+      <main class="content">
+        <!-- sale-timer-wrap -->
+        <div class="sale-timer-wrap">
+          <!-- timer-wrap -->
+          <div class="timer-wrap type2">
+            <div class="img"><img src="../images/temp/temp-main-banner2.jpg" alt=""></div>
+            <div class="timer-box">
+              <dl>
+                <dt>정기배송 상품</dt>
+                <dd>
+                  <dl>
+                    <dt>남은<br>시간</dt>
+                    <dd>
+                      <ul class="timer" id="time1">
+                        <li><b class="days">00</b><span>DAYS</span></li>
+                        <li><b class="hours">00</b><span>HOURS</span></li>
+                        <li><b class="minutes">00</b><span>MINUTES</span></li>
+                        <li><b class="seconds">00</b><span>SECONDS</span></li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <!-- // timer-wrap -->
+        </div>
+        <!-- // sale-timer-wrap -->
+
+        <div class="data-top line-b">
+          <span class="total">총 <em>8</em>개</span>
+          <div class="right">
+            <div class="pick-list-wrap">
+              <ul class="pick-list" data-evt="toggle-btns">
+                  <li class="on"><button type="button">추천순</button></li>
+                  <li><button type="button">낮은가격순</button></li>
+                  <li><button type="button">높은가격순</button></li>
+                  <li><button type="button">상품평순</button></li>
+                  <li><button type="button">등록일순</button></li>
+              </ul>
+              <select>
+                  <option value="10">10개씩보기</option>
+                  <option value="20" selected="selected">20개씩보기</option>
+                  <option value="30">30개씩보기</option>
+                  <option value="40">40개씩보기</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- priduct-list -->
+        <div class="priduct-list">
+          <ul>
+            <li>
+              <div class="item-cont">
+                <div class="item-photo-box">
+                  <a href="javascript:void(0);">
+                    <img src="../images/temp/temp-product-1.jpg" alt="">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="item_info_cont">
+                  <div class="item-tit-box">
+                    <strong class="item-name">오가닉몰 유기농 현미 스낵</strong>
+                    <span class="item-name-sub">유료회원가 9,310원</span>
+                  </div>
+                  <div class="item-money-box">
+                    <span class="sale-rate"><span><b>14</b></span><em>%</em></span>
+                    <strong class="item-price">
+                      <span>29,000원 </span>
+                    </strong>
+                    <span class="fixed-price">34,000원 </span>
+                  </div>
+                </a>
+                <!-- //item_info_cont -->
+                <button class="btn-to-cart"><i class="ico-cart"></i><span>정기배송담기</span></button>
+              </div>
+            </li>
+            <li>
+              <div class="item-cont">
+                <div class="item-photo-box">
+                  <a href="javascript:void(0);">
+                    <img src="../images/temp/temp-product-2.jpg" alt="">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="item_info_cont">
+                  <div class="item-tit-box">
+                    <strong class="item-name">오가닉몰 유기농 현미 스낵 오가닉몰 유기농 현미 스낵</strong>
+                    <span class="item-name-sub">유료회원가 9,310원</span>
+                  </div>
+                  <div class="item-money-box">
+                    <span class="sale-rate"><span><b>14</b></span><em>%</em></span>
+                    <strong class="item-price">
+                      <span>29,000원 </span>
+                    </strong>
+                    <span class="fixed-price">34,000원 </span>
+                  </div>
+                </a>
+                <!-- //item_info_cont -->
+                <button class="btn-to-cart"><i class="ico-cart"></i><span>정기배송담기</span></button>
+              </div>
+            </li>
+            <li>
+              <div class="item-cont">
+                <div class="item-photo-box">
+                  <a href="javascript:void(0);">
+                    <img src="../images/temp/temp-product-3.jpg" alt="">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="item_info_cont">
+                  <div class="item-tit-box">
+                    <strong class="item-name">오가닉몰 유기농 현미 스낵</strong>
+                    <span class="item-name-sub">유료회원가 9,310원</span>
+                  </div>
+                  <div class="item-money-box">
+                    <span class="sale-rate"><span><b>14</b></span><em>%</em></span>
+                    <strong class="item-price">
+                      <span>29,000원 </span>
+                    </strong>
+                    <span class="fixed-price">34,000원 </span>
+                  </div>
+                </a>
+                <!-- //item_info_cont -->
+                <button class="btn-to-cart"><i class="ico-cart"></i><span>정기배송담기</span></button>
+              </div>
+            </li>
+            <li>
+              <div class="item-cont">
+                <div class="item-photo-box">
+                  <a href="javascript:void(0);">
+                    <img src="../images/temp/temp-product-4.jpg" alt="">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="item_info_cont">
+                  <div class="item-tit-box">
+                    <strong class="item-name">오가닉몰 유기농 현미 스낵</strong>
+                    <span class="item-name-sub">유료회원가 9,310원</span>
+                  </div>
+                  <div class="item-money-box">
+                    <span class="sale-rate"><span><b>14</b></span><em>%</em></span>
+                    <strong class="item-price">
+                      <span>29,000원 </span>
+                    </strong>
+                    <span class="fixed-price">34,000원 </span>
+                  </div>
+                </a>
+                <!-- //item_info_cont -->
+                <button class="btn-to-cart"><i class="ico-cart"></i><span>정기배송담기</span></button>
+              </div>
+            </li>
+            <li>
+              <div class="item-cont">
+                <div class="item-photo-box">
+                  <a href="javascript:void(0);">
+                    <img src="../images/temp/temp-product-5.jpg" alt="">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="item_info_cont">
+                  <div class="item-tit-box">
+                    <strong class="item-name">오가닉몰 유기농 현미 스낵</strong>
+                    <span class="item-name-sub">유료회원가 9,310원</span>
+                  </div>
+                  <div class="item-money-box">
+                    <span class="sale-rate"><span><b>14</b></span><em>%</em></span>
+                    <strong class="item-price">
+                      <span>29,000원 </span>
+                    </strong>
+                    <span class="fixed-price">34,000원 </span>
+                  </div>
+                </a>
+                <!-- //item_info_cont -->
+                <button class="btn-to-cart"><i class="ico-cart"></i><span>정기배송담기</span></button>
+              </div>
+            </li>
+            <li>
+              <div class="item-cont">
+                <div class="item-photo-box">
+                  <a href="javascript:void(0);">
+                    <img src="../images/temp/temp-product-1.jpg" alt="">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="item_info_cont">
+                  <div class="item-tit-box">
+                    <strong class="item-name">오가닉몰 유기농 현미 스낵</strong>
+                    <span class="item-name-sub">유료회원가 9,310원</span>
+                  </div>
+                  <div class="item-money-box">
+                    <span class="sale-rate"><span><b>14</b></span><em>%</em></span>
+                    <strong class="item-price">
+                      <span>29,000원 </span>
+                    </strong>
+                    <span class="fixed-price">34,000원 </span>
+                  </div>
+                </a>
+                <!-- //item_info_cont -->
+                <button class="btn-to-cart"><i class="ico-cart"></i><span>정기배송담기</span></button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- // product-list -->
+        <!-- pagination -->
+        <div class="pagination">
+          <a href="javascript:void(0);" class="btn-first"></a>
+          <a href="javascript:void(0);" class="btn-prev"></a>
+          <ul>
+            <li class="on"><span>1</span></li>
+            <li><span>2</span></li>
+            <li><span>3</span></li>
+            <li><span>4</span></li>
+            <li><span>5</span></li>
+          </ul>
+          <a href="javascript:void(0);" class="btn-next"></a>
+          <a href="javascript:void(0);" class="btn-last"></a>
+        </div>
+        <!-- // pagination -->
+
+        <div class="data-top line-t">
+          <h3 class="title-subject">내 정기 배송 상품</h3>
+        </div>
+
+        <table class="table-type1">
+          <colgroup>
+              <col style="width:50px">
+              <col style="width:auto">
+              <col style="width:200px">
+              <col style="width:150px">
+              <col style="width:150px">
+          </colgroup>
+          <thead>
+          <tr>
+              <th>
+                <label class="inp-chk">
+                  <input type="checkbox" name="chk" data-evt="all-chk"><span class="ic"></span>
+                </label>
+              </th>
+              <th>상품/옵션 정보</th>
+              <th>상품금액/수량</th>
+              <th>정기배송 혜택</th>
+              <th>합계금액</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label class="inp-chk">
+                  <input type="checkbox" name="chk"><span class="ic"></span>
+                </label>
+              </td>
+              <td>
+                <div class="order-product">
+                  <div class="product">
+                    <div class="img"><img src="../images/temp/temp-product-detail.png" alt=""></div>
+                    <div class="item"><span class="name">푸르밀 딸기 우유 225ml*4</span></div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="row align-c"><b>29,000원</b> / 1개</div>
+                <div class="row align-c"><button class="btn-type7 st5">옵션/수량변경</button></div>
+              </td>
+              <td><b>-100원</b></td>
+              <td><b>29,000원</b></td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- // table-type1 -->
+         
+        <div class="btn-wrap">
+          <button class="btn-type5 st2 min-size2">선택 상품 삭제</button>
+         </div>
+
+        <div class="price-sub-box">
+          <div class="price-sum-list">
+            <dl>
+                <dt>총 상품금액</dt>
+                <dd><b>29,000</b><span>원</span></dd>
+            </dl>
+            <i class="ico-plus"></i>
+            <dl>
+                <dt>유료회원할인</dt>
+                <dd><b>0</b><span>원</span></dd>
+            </dl>
+            <i class="ico-plus"></i>
+            <dl>
+                <dt>정기배송할인</dt>
+                <dd><b >2,500</b><span>원</span></dd>
+            </dl>            
+            <i class="ico-plus"></i>
+            <dl>
+                <dt>배송비</dt>
+                <dd><b >10</b><span>원</span></dd>
+            </dl>
+            <i class="ico-total"></i>
+            <dl class="price-total">
+                <dt>합계</dt>
+                <dd><b>31,500</b><span>원</span></dd>
+            </dl>
+          </div>
+        </div>        
+        <!-- // price-sub-box -->        
+
+        <table class="table-type1 st2">
+          <colgroup>
+              <col style="width:180px">
+              <col style="width:auto">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>정기배송 이용기간</th>
+              <td>
+                <div class="input-wrap">
+                  <label class="inp-chk">
+                    <input type="radio" name="priod"><span class="ic"></span>
+                    <span class="t">1개월</span> 
+                  </label>
+                  <label class="inp-chk">
+                    <input type="radio" name="priod"><span class="ic"></span>
+                    <span class="t">3개월</span> 
+                  </label>
+                  <label class="inp-chk">
+                    <input type="radio" name="priod"><span class="ic"></span>
+                    <span class="t">6개월</span> 
+                  </label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>배송주기</th>
+              <td>
+                <div class="input-wrap">
+                  <label class="inp-chk">
+                    <input type="radio" name="cycle"><span class="ic"></span>
+                    <span class="t">1주 간격</span> 
+                  </label>
+                  <label class="inp-chk">
+                    <input type="radio" name="cycle"><span class="ic"></span>
+                    <span class="t">2주 간격</span> 
+                  </label>
+                  <label class="inp-chk">
+                    <input type="radio" name="cycle"><span class="ic"></span>
+                    <span class="t">4주 간격</span> 
+                  </label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>정기배송 요일/시간</th>
+              <td>
+                <div class="block row">
+                  · 최초 정기배송은 오늘 날짜에서 2일 후 부터 가능합니다.  
+                  <div class="right">
+                    <span class="c-lightgray">현재시각</span> : <b>2024년 7월 1일 11시 11분</b>
+                  </div>
+                </div>
+                <table class="table-type1">
+                  <colgroup>
+                      <col style="width:210px">
+                      <col style="width:auto">
+                      <col style="width:auto">
+                      <col style="width:auto">
+                      <col style="width:auto">
+                      <col style="width:auto">
+                      <col style="width:auto">
+                      <col style="width:auto">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>예약배송</th>
+                      <th>일</th>
+                      <th>월</th>
+                      <th>화</th>
+                      <th>수</th>
+                      <th>목</th>
+                      <th>금</th>
+                      <th>토</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><b>10:00 ~ 13:00</b></td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date" checked><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><b>11:00 ~ 14:00</b></td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><b>14:00 ~ 17:00</b></td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="inp-chk">
+                          <input type="radio" name="date"><span class="ic"></span>
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>                
+              </td>
+            </tr>
+          </tbody>
+        </table>     
+         <!-- // table-type1  -->
+          
+
+         <!-- 배송정보 -->
+         <div class="data-top">
+          <h3 class="title-subject">배송정보</h3>
+          <span class="tit-sub c-red">* 신청 이후에는 배송지를 변경하실수 없습니다.</span>
+        </div>
+        <table class="table-type1 st2">
+          <colgroup>
+              <col style="width:180px">
+              <col style="width:auto">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>배송지 확인</th>
+              <td>
+                <label class="inp-chk">
+                  <input type="checkbox"><span class="ic"></span>
+                  <span class="t">기본 배송지</span> 
+                </label>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <button class="btn-type7 st5">배송지 관리</button>
+              </td>
+            </tr>
+            <tr>
+              <th>받으실분</th>
+              <td><input type="text" style="width: 220px;;"></td>
+            </tr>
+            <tr>
+              <th>받으실 곳</th>
+              <td>
+                <div class="row"><input type="text" value="16851" style="width:220px;" disabled></div>
+                <div class="row">
+                  <input type="text" value="경기도 용인시 수지구 성복2로 110 (성복동)" style="width:400px;" disabled>
+                  <input type="text" value="1층" style="width:220px;" disabled>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>전화번호</th>
+              <td>000-0000-0000</td>
+            </tr>
+            <tr>
+              <th>휴대폰 번호</th>
+              <td>000-0000-0000</td>
+            </tr>
+          </tbody>
+        </table>
+         <!-- 배송정보 -->
+         <div class="delivery-agree-wrap">
+          <div class="agree">
+            <label class="inp-chk">
+              <input type="checkbox"><span class="ic"></span>
+              <div class="t">
+                <div><b>(필수)</b> &nbsp;<span class="c-red">결제는 예약하신 날짜에 상품 배달 시 대면카드 결제를 통해 이뤄지며,</span></div>
+                <div>마이페이지에서 언제든지 취소하실 수있습니다. 신청에동의 합니다.</div>
+              </div>
+             </label>
+          </div>
+          <div class="btn-wrap center">
+            <button class="btn-type1 st6 min-size1">정기배송 신청하기</button>
+          </div>
+        </div>
+        <!-- // payment-total-wrap -->
+
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+
+  
+  <script>
+    getTime('#time1', '2024-12-24 00:00:00+0900')    
+  </script>
+</body>
+</html>

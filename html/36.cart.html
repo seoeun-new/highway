@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+    <!-- container -->
+    <div class="container">
+      <main class="content">
+        <div class="cotent-header line-b">
+          <div class="left">
+            <ul class="path">
+              <li>홈</li>
+              <li>장바구니</li>
+            </ul>
+            <h2 class="title-main">장바구니</h2>
+          </div>
+          <div class="right">
+            <div class="step-list">
+              <ol>
+                <li class="on"><span>01</span> 장바구니</li>
+                <li><span>02</span>주문서작성/결제</li>
+                <li><span>03</span>주문완료</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        
+        <table class="table-type1">
+          <colgroup>
+              <col style="width:50px">
+              <col style="width:auto">
+              <col style="width:120px">
+              <col style="width:120px">
+              <col style="width:120px">
+              <col style="width:120px">
+          </colgroup>
+          <thead>
+          <tr>
+              <th>
+                <label class="inp-chk">
+                  <input type="checkbox" name="chk" data-evt="all-chk"><span class="ic"></span>
+                </label>
+              </th>
+              <th>상품/옵션 정보</th>
+              <th>상품금액</th>
+              <th>쿠폰 할인</th>
+              <th>합계금액</th>
+              <th>배송비</th>              
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label class="inp-chk">
+                  <input type="checkbox" name="chk"><span class="ic"></span>
+                </label>
+              </td>
+              <td>
+                <div class="order-product">
+                  <div class="product">
+                    <div class="img"><img src="../images/temp/temp-product-detail.png" alt=""></div>
+                    <div class="item"><span class="tag">쿠폰적용</span><span class="name">푸르밀 딸기 우유</span></div>
+                  </div>
+                  <div class="order-num">
+                    <b>1개</b>
+                    <button class="btn-type7 st5">옵션/수량변경</button>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="order-price">
+                  <span class="org">40,000원</span>
+                  <b>29,000원</b>
+                </div>
+              </td>
+              <td>
+                <div class="order-price">
+                  <b>0원</b>
+                </div>
+              </td>
+              <td>
+                <div class="order-price">
+                  <b>29,000원</b>
+                </div>
+              </td>
+              <td>무료배송</td>
+            </tr>
+            <tr>
+              <td>
+                <label class="inp-chk">
+                  <input type="checkbox" name="chk"><span class="ic"></span>
+                </label>
+              </td>
+              <td>
+                <div class="order-product">
+                  <div class="product">
+                    <div class="img"><img src="../images/temp/temp-product-detail.png" alt=""></div>
+                    <div class="item"><span class="tag">쿠폰적용</span><span class="name">푸르밀 딸기 우유 225ml*4</span></div>
+                  </div>
+                  <div class="order-num">
+                    <b>1개</b>
+                    <button class="btn-type7 st5">옵션/수량변경</button>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="order-price">
+                  <span class="org">40,000원</span>
+                  <b>29,000원</b>
+                </div>
+              </td>
+              <td>
+                <div class="order-price">
+                  <b>0원</b>
+                </div>
+              </td>
+              <td>
+                <div class="order-price">
+                  <b>29,000원</b>
+                </div>
+              </td>
+              <td>무료배송</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- // table-type1 -->
+        <div class="btn-wrap mg-sm">
+          <a href="javascript:void(0);" class="btn-goto">쇼핑계속하기</a>
+         </div>
+
+        <div class="price-sub-box">
+          <div class="price-sum-list">
+            <dl>
+                <dt>총 상품금액</dt>
+                <dd><b>29,000</b><span>원</span></dd>
+            </dl>
+            <i class="ico-plus"></i>
+            <dl>
+                <dt>유료회원할인</dt>
+                <dd><b>0</b><span>원</span></dd>
+            </dl>
+            <i class="ico-plus"></i>
+            <dl>
+                <dt>쿠폰할인</dt>
+                <dd><b >2,500</b><span>원</span></dd>
+            </dl>
+            <i class="ico-plus"></i>
+            <dl>
+                <dt>배송비</dt>
+                <dd><b >10</b><span>원</span></dd>
+            </dl>            
+            <i class="ico-total"></i>            
+            <dl class="price-total">
+                <dt>합계</dt>
+                <dd><b>31,500</b><span>원</span></dd>
+            </dl>
+          </div>
+        </div>        
+        <!-- // price-sub-box -->
+
+        <div class="btn-wrap mg-lg">
+          <button class="btn-type5 st2 min-size2">선택 상품 삭제</button>
+          <button class="btn-type5 st2 min-size2">선택 상품 찜</button>
+          <div class="right">
+            <div class="tooltip-wrap">
+              <div class="tooltip">
+                50,0000원 이상부터
+                <br>주문 가능합니다.
+                <br>18,500원 어치 더 담아주세요!
+              </div>
+              <button class="btn-type2 st2">선택 상품 주문</button>
+            </div>
+            <div class="tooltip-wrap">
+              <div class="tooltip">
+                50,0000원 이상부터
+                <br>주문 가능합니다.
+                <br>18,500원 어치 더 담아주세요!
+              </div>
+              <button class="btn-type2 st1" >전체 상품 주문</button>
+            </div>
+          </div>
+         </div>
+
+         <p class="txt-noti right">주문서 작성단계에서 장바구니할인/마일리지 적용을 하실 수 있습니다.</p>
+
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+
+</body>
+</html>

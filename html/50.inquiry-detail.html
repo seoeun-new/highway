@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+    <!-- container -->
+    <div class="container">
+      <ul class="path">
+        <li>홈</li>
+        <li>마이페이지</li>
+        <li>1:1문의</li>
+      </ul>
+      <!-- snb-wrap -->
+      <script>
+        $.get("common/snb.html", function (data) {
+          $(data).insertBefore('.content');
+        });
+      </script>
+      <!-- // snb-wrap -->
+      <main class="content">
+        <div class="data-top">
+          <h3 class="title-main">1:1문의</h3>
+        </div>
+                
+        <!-- board-view-wrap -->
+        <div class="board-view-wrap">
+          <div class="board-view-tit">
+            <h3>하이웨이마트몰이 리뉴얼 오픈하였습니다.</h3>
+          </div>
+          <div class="board-view-info">
+            <div class="info-set"><b>관리자</b><span class="bar"></span><span>2021.12.01 10:55:51</span></div>
+            <div class="right">
+              <div class="info-set"><b>조회수</b><span>26</span></div>
+            </div>
+          </div>
+          <div class="board-view-info">
+            <div class="info-set"><b>첨부파일</b><span class="bar"></span><a href="javascript:void(0);">vkdlfvdfsdfasdf.hwp</a></div>
+          </div>
+          <div class="board-qna-content">
+            <dl class="board-qna">
+              <!-- 질문 -->
+              <dt>Q</dt>
+              <dd><img src="../images/temp/temp-product-4.jpg" alt="">
+                <br>
+                문의문의문의문의문의문의문의문의문의
+                <br>문의문의문의
+                <br>
+                <br>문의문의문의
+              </dd>
+            </dl>
+            <!-- 답변 -->
+            <dl class="board-qna">
+              <dt>A</dt>
+              <dd>답변
+                <br> 답변
+                <br> 답변
+                <br> 답변
+                <br> 답변
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <!-- // board-view-wrap -->        
+        <div class="btn-wrap">
+          <div class="right">
+            <a href="javascript:void(0);" class="btn-type4 st2">삭제</a>
+            <a href="javascript:void(0);" class="btn-type4 st2">수정</a>
+            <a href="javascript:void(0);" class="btn-type4 st2">목록</a>
+          </div>
+         </div>  
+        
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+</body>
+</html>

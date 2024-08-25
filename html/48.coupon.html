@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+    <!-- container -->
+    <div class="container">
+      <ul class="path">
+        <li>홈</li>
+        <li>마이페이지</li>
+        <li>쿠폰</li>
+      </ul>
+      <!-- snb-wrap -->
+      <script>
+        $.get("common/snb.html", function (data) {
+          $(data).insertBefore('.content');
+        });
+      </script>
+      <!-- // snb-wrap -->
+      <main class="content">
+        <!-- mypage-info-wrap -->
+        <div class="mypage-info-wrap">
+          <div class="info-desc">
+              <p class="txt">이재욱님의
+                <br>회원등급은 일반회원등급 입니다.</p>
+              <!-- pop-tooltip-wrap -->
+              <div class="pop-tooltip-wrap">
+                <button type="button" class="btn-type7 st2 st-arr" data-evt=pop-tooltip>등급혜택보기</button>
+                <div class="pop-tooltip">
+                  <a href="javascript:void(0);" class="close"></a>
+                  <div class="pop-header"><strong class="tit">등급혜택 안내</strong></div>
+                  <div class="pop-body">
+                    <div class="grade-list">
+                      <dl>
+                          <dt>회원 등급</dt>
+                          <dd>일반회원등급</dd>
+                      </dl>
+                      <dl>
+                          <dt>추가 할인</dt>
+                          <dd><strong>0원이상 구매시 상품 판매금액의 0.0% 추가 할인</strong></dd>
+                      </dl>
+                      <dl>
+                          <dt>중복 할인</dt>
+                          <dd><strong>0원이상 구매시 상품 판매금액의 0.0% 추가 할인</strong></dd>
+                      </dl>
+                      <dl>
+                          <dt>추가  적립</dt>
+                          <dd>0원이상 구매 시 구매금액당 0.0% 추가 적립</dd>
+                      </dl>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <!-- // pop-tooltip-wrap -->
+          </div>
+          <div class="my-wallet">
+            <ul>
+              <li>
+                <div class="icon"><img src="../images/common/ico-coupon.png" alt=""></div>
+                <dl>
+                  <dt>쿠폰</dt>
+                  <dd><b>0</b><span>장</span></dd>
+                </dl>
+              </li>
+              <li>
+                <div class="icon"><img src="../images/common/ico-mileage.png" alt=""></div>
+                <dl>
+                  <dt>마일리지</dt>
+                  <dd><b>0</b><span>원</span></dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- // mypage-info-wrap -->        
+        
+        <!-- 쿠폰 -->
+        <div class="data-top">
+          <h3 class="title-subject">쿠폰</h3>
+        </div>
+        <div class="date-setting-box">
+          <span class="label">조회기간</span>
+          <div class="date-menu range-menu">
+            <label data-init="checked">
+                <input type="radio" name="btn_item" value="today"><span>오늘</span>
+            </label>
+            <label>
+                <input type="radio" name="btn_item" value="oneWeek"><span>7일</span>
+            </label>
+            <label>
+                <input type="radio" name="btn_item" value="fifteenDay"><span>15일</span>
+            </label>
+            <label>
+                <input type="radio" name="btn_item" value="oneMonth"><span>1개월</span>
+            </label>
+            <label>
+                <input type="radio" name="btn_item" value="threeMonth"><span>3개월</span>
+            </label>
+            <label>
+                <input type="radio" name="btn_item" value="oneYear"><span>1년</span>
+            </label>
+          </div>
+          <div class="input-calendar">
+            <div class="inp"><input type="text" class="datepicker start-date"></div>
+            <div class="inp"><input type="text" class="datepicker end-date"></div>
+          </div>  
+          <button class="btn-search"><span>조회</span></button>
+        </div>
+        <!-- // date-setting-box -->
+        <!-- // 쿠폰 -->
+        
+        <div class="tab-type2">
+          <div class="right">
+            <button class="btn-type7 st7">쿠폰등록</button>
+          </div>
+          <ul>
+              <li class="on"><a href="javascript:void(0);" data-tab-id="tab1">사용가능</a></li>
+              <li><a href="javascript:void(0);" data-tab-id="tab2">사용불가</a></li>
+          </ul>
+        </div>
+        <!-- 사용가능 -->
+        <div id="tab1" class="tab-content">
+          <div class="data-top">
+            <div class="txt-period"><b>2024-07-11 ~ 2024-07-17</b> 까지의 쿠폰내역</div>
+          </div>
+          <table class="table-type1">
+            <colgroup>
+                <col style="width:auto">
+                <col style="width:130px">
+                <col style="width:130px">
+                <col style="width:130px">
+                <col style="width:130px">
+            </colgroup>
+            <thead>
+            <tr>
+              <th>쿠폰명</th>
+              <th>혜택</th>
+              <th>사용조건</th>
+              <th>제한조건</th>
+              <th>유효기간</th>
+              <th>발급일</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <td colspan="6">
+                <div class="no-data">조회내역이 없습니다.</div>
+              </td>
+            </tbody>
+          </table>
+        </div>
+        <!-- // 사용가능 -->
+        <!-- 사용불가 -->
+        <div id="tab2" class="tab-content" style="display: none;">
+          사용불가탭
+          <br>사용불가탭
+          <br>사용불가탭
+          <br>사용불가탭
+          <br>사용불가탭
+          <br>사용불가탭
+          <br>사용불가탭
+        </div>
+        <!-- // 사용불가 -->
+
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+</body>
+</html>

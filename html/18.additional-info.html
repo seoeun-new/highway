@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+    <!-- container -->
+    <div class="container">
+      <main class="content">
+        <div class="cotent-header line-b">
+          <div class="left">
+            <ul class="path">
+              <li>홈</li>
+              <li>회원가입</li>
+              <li>정보입력</li>
+            </ul>
+            <h2 class="title-main">추가정보입력</h2>
+          </div>
+          <div class="right">
+            <div class="step-list">
+              <ol>
+                <li><span>01</span>약관동의</li>
+                <li class="on"><span>02</span>정보입력</li>
+                <li><span>03</span>가입완료</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrapper2">
+          <div class="data-top">
+            <h3 class="title-subject">기본 정보</h3>
+            <div class="right">
+              <p class="txt-important"><span class="star">*</span>표시는 반드시 입력하셔야 하는 항목입니다.</p>
+            </div>
+          </div>
+          <table class="table-type1 st2">
+            <colgroup>
+                <col style="width:180px">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>이름<span class="star">*</span></th>
+                <td>
+                  <input type="text" style="width:380px">
+                </td>
+              </tr>
+              <tr>
+                <th>휴대폰번호<span class="star">*</span></th>
+                <td>
+                  <div class="row">
+                    <input type="text" style="width:190px;" disabled> <button type="button" class="btn-type5 st7">휴대폰 인증</button>
+                  </div>
+                  <p class="txt">인증이 완료 되었습니다.</p>
+                </td>
+              </tr>
+              <tr>
+                <th>주소<span class="star">*</span></th>
+                <td>
+                  <div class="inp-address">
+                    <div class="row">
+                      <input type="text" style="width:190px;" disabled> <button type="button" class="btn-type5 st7">우편번호검색</button>
+                    </div>
+                    <div class="row">
+                      <input type="text" style="width:380px;" disabled>
+                    </div>
+                    <div class="row">
+                      <input type="text" style="width:380px;" disabled>
+                    </div>
+                    <div class="row">
+                      <div class="addr-txt">
+                        <em>수지성복점</em>
+                        <span>배달 가능 지역입니다.</span>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="btn-wrap center mg-lg">
+            <a href="javascript:void(0);" class="btn-type3 st2">취소</a>
+            <a href="javascript:void(0);" class="btn-type3 st1">회원가입</a>
+           </div>
+        </div>
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+
+</body>
+</html>

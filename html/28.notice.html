@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+    <!-- container -->
+    <div class="container">
+      <main class="content">
+        <div class="cotent-header">
+          <h2 class="title-main">공지사항</h2>
+        </div>
+        <table class="table-type1">
+          <colgroup>
+              <col style="width:6%">
+              <col style="width:37%;">		
+              <col style="width:10%">
+              <col style="width:10%">
+              <col style="width:6%">
+          </colgroup>
+          <thead>
+          <tr>
+              <th>번호</th>
+              <th>제목</th>
+              <th>날짜</th>
+              <th>작성자</th>
+              <th>조회</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>3</td>
+                <td class="align-l">
+                  <div class="board-tit"><a href="javascript:void(0);">쇼핑몰디자인 전문 웹에이전시입니다 쇼핑몰디자인 전문 웹에이전시입니다쇼핑몰디자인 전문 웹에이전시입니다쇼핑몰디자인 전문 웹에이전시입니다</a></div>
+                </td>
+                <td> 2021.12.01 </td>
+                <td> 관리자 </td>
+                <td> 24 </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="align-l">
+                  <div class="board-tit"><a href="javascript:void(0);">대기업급 디자이너가 직접 제작</a></div>
+                </td>
+                <td> 2021.12.01 </td>
+                <td> 관리자 </td>
+                <td> 24 </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="align-l">
+                  <div class="board-tit"><a href="javascript:void(0);">운영에 용이한 디자인이용가이드 제공</a></div>
+                </td>
+                <td> 2021.12.01 </td>
+                <td> 관리자 </td>
+                <td> 24 </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- pagination -->
+        <div class="pagination">
+          <a href="javascript:void(0);" class="btn-first"></a>
+          <a href="javascript:void(0);" class="btn-prev"></a>
+          <ul>
+            <li class="on"><span>1</span></li>
+            <li><span>2</span></li>
+            <li><span>3</span></li>
+            <li><span>4</span></li>
+            <li><span>5</span></li>
+          </ul>
+          <a href="javascript:void(0);" class="btn-next"></a>
+          <a href="javascript:void(0);" class="btn-last"></a>
+        </div>
+        <!-- // pagination -->
+        <div class="board-search-box">
+          <form>
+              <select>
+                  <option value="">제목</option>
+                  <option value="">내용</option>
+                  <option value="">작성자</option>
+              </select>
+              <input type="text">
+              <button class="btn-board-search">검색</button>
+          </form>
+        </div>
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+    <!-- container -->
+    <div class="container">
+      <ul class="path">
+        <li>홈</li>
+        <li>마이페이지</li>
+        <li>회원탈퇴</li>
+      </ul>
+      <!-- snb-wrap -->
+      <script>
+        $.get("common/snb.html", function (data) {
+          $(data).insertBefore('.content');
+        });
+      </script>
+      <!-- // snb-wrap -->
+      <main class="content">
+        <div class="data-top line-b-st2">
+          <h3 class="title-main">회원탈퇴</h3>
+        </div>   
+        
+        <!-- 01.회원탈퇴 안내 -->
+        <div class="data-top">
+          <h3 class="title-subject">01.회원탈퇴 안내</h3>
+        </div>
+        <div class="rule-withdrawal">
+          <div class="rule-box">
+            하이웨이마트 탈퇴안내<br>
+            <br>
+            회원님께서 회원 탈퇴를 원하신다니 저희 쇼핑몰의 서비스가 많이 부족하고 미흡했나 봅니다.<br>
+            불편하셨던 점이나 불만사항을 알려주시면 적극 반영해서 고객님의 불편함을 해결해 드리도록 노력하겠습니다.<br>
+            <br>
+            ■ 아울러 회원 탈퇴시의 아래 사항을 숙지하시기 바랍니다.<br>
+            1. 회원 탈퇴 시 회원님의 정보는 상품 반품 및 A/S를 위해 전자상거래 등에서의 소비자 보호에 관한 법률에 의거한 <br>
+            고객정보 보호정책에따라 관리 됩니다.<br>
+            2. 탈퇴 시 회원님께서 보유하셨던 마일리지는 삭제 됩니다
+          </div>
+        </div>
+        <!-- // rule-withdrawal -->
+        
+
+        <!-- 02.회원탈퇴 하기 -->
+        <div class="data-top">
+          <h3 class="title-subject">02.회원탈퇴 하기</h3>
+        </div>
+          
+        <table class="table-type1 st2">
+          <colgroup>
+              <col style="width:180px">
+              <col style="width:auto;">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>비밀번호</th>
+              <td><input type="text" style="width:160px"></td>
+            </tr>
+            <tr>
+              <th>탈퇴사유</th>
+              <td>
+                <ul class="withdrawal-list">
+                  <li>
+                    <label class="inp-chk">
+                      <input type="checkbox"><span class="ic"></span>
+                      <span class="t">고객서비스(상담,포장 등) 불만</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="inp-chk">
+                      <input type="checkbox"><span class="ic"></span>
+                      <span class="t">배송불만</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="inp-chk">
+                      <input type="checkbox"><span class="ic"></span>
+                      <span class="t">교환/환불/반품 불만</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="inp-chk">
+                      <input type="checkbox"><span class="ic"></span>
+                      <span class="t">방문 빈도가 낮음</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="inp-chk">
+                      <input type="checkbox"><span class="ic"></span>
+                      <span class="t">상품가격 불만</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="inp-chk">
+                      <input type="checkbox"><span class="ic"></span>
+                      <span class="t">개인 정보유출 우려</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="inp-chk">
+                      <input type="checkbox"><span class="ic"></span>
+                      <span class="t">쇼핑몰의 신뢰도 불만</span>
+                    </label>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>남기실 말씀</th>
+              <td>
+                <div class="textarea" style="height:100px;"><textarea></textarea></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="btn-wrap center mg-lg">
+          <a href="javascript:void(0);" class="btn-type3 st2">이전으로</a>
+          <a href="javascript:void(0);" class="btn-type3 st1">탈퇴</a>
+         </div>
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+</body>
+</html>

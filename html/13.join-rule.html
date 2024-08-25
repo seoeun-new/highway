@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+    <!-- container -->
+    <div class="container">
+      <main class="content">
+        <div class="cotent-header line-b">
+          <div class="left">
+            <ul class="path">
+              <li>홈</li>
+              <li>회원가입</li>
+              <li>약관동의</li>
+            </ul>
+            <h2 class="title-main">회원가입</h2>
+          </div>
+          <div class="right">
+            <div class="step-list">
+              <ol>
+                <li class="on"><span>01</span>약관동의</li>
+                <li><span>02</span>정보입력</li>
+                <li><span>03</span>가입완료</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        
+        <div class="wrapper2">
+          <!-- 기본 정보 -->
+          <div class="data-top">
+            <h3 class="title-subject">약관동의</h3>
+          </div>
+          <!-- join-rule-agree -->
+          <div class="join-rule-agree">
+            <div class="total-agree">
+              <label class="inp-chk">
+                <input type="checkbox" id="allCheck"><span class="ic"></span>
+                <span class="t"><b>모든 약관을 확인하고 전체 동의합니다.</b></span>
+              </label>            
+              <span class="sm-txt">(전체동의, 선택항목도 포함됩니다.)</span>  
+            </div>
+            <!--  -->
+            <div class="rule-unit">
+              <div class="agree_choice">
+                <label class="inp-chk">
+                  <input type="checkbox"><span class="ic"></span>
+                  <span class="t"><b>(필수)</b>이용약관</span> 
+                </label>
+                <a href="javascript:void(0);" class="link" target="_blank">전체보기</a>
+              </div>
+              <div class="rule-box">제 1 장 총칙
+
+                제 1 조 (목적)
+                
+                이 약관은 포탈하이웨이 (이하 “당사”라고 한다)에서 운영하는 하이웨이쇼핑몰 (highwaymart.co.kr) (이하 “몰”라 한다)에서 제공하는 인터
+                넷 관련 서비스(이하 "서비스"라 한다)를 이용함에 있어 "당사"와 이용자의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.
+                </div>
+            </div>
+            <!--  -->
+            <div class="rule-unit">
+              <div class="agree_choice">
+                <label class="inp-chk">
+                  <input type="checkbox"><span class="ic"></span>
+                  <span class="t"><b>(필수)</b>개인정보 수집 및 이용</span> 
+                </label>
+                <a href="javascript:void(0);" class="link" target="_blank">전체보기</a>
+              </div>
+              <div class="rule-box">회사는 회원가입, 민원 등 고객상담 처리, 본인확인(14세 미만 아동 확인) 등 의사소통을 위한 정보 활용 및 이벤트 등과 같은 마케팅용도 활용, 회원의 서비스 이용에 대한 통계, 이용자들의 개인정보를 통한 서비스 개발을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+
+                1. - 목적 : 이용자 식별 및 본인여부 확인 
+
+                - 항목 : 이름, 아이디, 비밀번호,닉네임, 이메일, 휴대폰번호, 주소, 전화번호 등                                
+                </div>
+            </div>
+            <!--  -->
+            <div class="rule-unit">
+              <div class="agree_choice">
+                <label class="inp-chk">
+                  <input type="checkbox"><span class="ic"></span>
+                  <span class="t"><b>(필수)</b>무료회원 이용약관</span> 
+                </label>
+                <a href="javascript:void(0);" class="link" target="_blank">전체보기</a>
+              </div>
+              <div class="rule-box">회사는 회원가입, 민원 등 고객상담 처리, 본인확인(14세 미만 아동 확인) 등 의사소통을 위한 정보 활용 및 이벤트 등과 같은 마케팅용도 활용, 회원의 서비스 이용에 대한 통계, 이용자들의 개인정보를 통한 서비스 개발을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+
+                1. - 목적 : 이용자 식별 및 본인여부 확인 
+
+                - 항목 : 이름, 아이디, 비밀번호,닉네임, 이메일, 휴대폰번호, 주소, 전화번호 등                                
+                </div>
+            </div>
+          </div>
+          <!-- // join-rule-agree -->
+          
+
+          <div class="btn-wrap center mg-lg">
+            <a href="javascript:void(0);" class="btn-type3 st1">다음단계</a>
+           </div>
+        </div>
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+  <script>
+    //약관동의 선택(checkbox)
+    const checkboxs = $(".rule-unit .inp-chk input[type=checkbox]");
+    $("#allCheck").on("change", function() {
+        if ($(this).is(':checked')) {
+            checkboxs.prop('checked', true);
+        } else {
+            checkboxs.prop('checked', false);
+        }
+        authCheckInputs();
+    });
+    checkboxs.on("change", function(event) {
+        let total = $(".rule-unit .inp-chk input[type=checkbox]").length;
+        let checked = $(".rule-unit .inp-chk input[type=checkbox]:checked").length;
+        if (total === checked) {
+            $("#allCheck").prop("checked", true);
+        } else {
+            $("#allCheck").prop("checked", false);
+        }
+        authCheckInputs();
+    });
+</script>  
+</body>
+</html>

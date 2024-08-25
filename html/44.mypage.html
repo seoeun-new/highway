@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <title></title>
+
+  <link type="text/css" rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="../js/swiper/swiper-bundle.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../js/ui.js"></script>
+
+
+</head>
+
+<body>
+  <!-- wrap -->
+  <div class="wrap">
+    <script>
+      $.get("common/header.html", function (data) {
+        $(data).prependTo(".wrap");
+      });
+    </script>
+    <!-- container -->
+    <div class="container">
+      <ul class="path">
+        <li>홈</li>
+        <li>마이페이지</li>
+      </ul>
+      <!-- snb-wrap -->
+      <script>
+        $.get("common/snb.html", function (data) {
+          $(data).insertBefore('.content');
+        });
+      </script>
+      <!-- // snb-wrap -->
+      <main class="content">
+        <!-- mypage-info-wrap -->
+        <div class="mypage-info-wrap">
+          <div class="info-desc">
+              <p class="txt">이재욱님의
+                <br>회원등급은 일반회원등급 입니다.</p>
+              <!-- pop-tooltip-wrap -->
+              <div class="pop-tooltip-wrap">
+                <button type="button" class="btn-type7 st2 st-arr" data-evt=pop-tooltip>등급혜택보기</button>
+                <div class="pop-tooltip">
+                  <a href="javascript:void(0);" class="close"></a>
+                  <div class="pop-header"><strong class="tit">등급혜택 안내</strong></div>
+                  <div class="pop-body" style="width: 470px;">
+                    <div class="grade-list">
+                      <dl>
+                          <dt>회원 등급</dt>
+                          <dd>일반회원(회원구매등급레벨) <br>유료회원(회원구매등급레벨)</dd>
+                      </dl>
+                      <dl>
+                          <dt>추가 할인</dt>
+                          <dd><strong>일반회원 : 카드구매시 0% 추가할인, 현금 구매시 0% 추가할인 <br>유료회원 : 카드 구매시 3% 추가할인, 현금 구매시 5% 추가할인</strong></dd>
+                      </dl>
+                      <dl>
+                          <dt>중복 할인</dt>
+                          <dd><strong>월별 혜택으로 변경 : 구매 등급별 장바구니 쿠폰 발급 (월별)</strong></dd>
+                      </dl>
+                      <dl>
+                          <dt>추가  적립</dt>
+                          <dd>일반회원 : 구매 금액 당 0.5% 적립 <br>유료회원 : 구매 금액 당 0% 적립</dd>
+                      </dl>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <!-- // pop-tooltip-wrap -->
+          </div>
+          <div class="my-wallet">
+            <ul>
+              <li>
+                <div class="icon"><img src="../images/common/ico-coupon.png" alt=""></div>
+                <dl>
+                  <dt>쿠폰</dt>
+                  <dd><b>0</b><span>장</span></dd>
+                </dl>
+              </li>
+              <li>
+                <div class="icon"><img src="../images/common/ico-mileage.png" alt=""></div>
+                <dl>
+                  <dt>마일리지</dt>
+                  <dd><b>0</b><span>원</span></dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- // mypage-info-wrap -->        
+        
+        <!-- 진행 중인 주문 -->
+        <div class="data-top">
+          <h3 class="title-subject">진행 중인 주문</h3>
+          <span class="tit-sub">최근 30일 내에 진행중인 주문정보입니다.</span>
+        </div>
+
+        <div class="order-status-box">
+          <ul>
+            <li><b>0</b><span>주문접수</span></li>
+            <li><b>0</b><span>결제완료</span></li>
+            <li><b>1</b><span>상품준비중</span></li>
+            <li><b>2</b><span>배송중</span></li>
+            <li><b>3</b><span>배송완료</span></li>
+          </ul>
+        </div>
+        
+        <div class="cancel-status-box">
+          <ul>
+            <li>
+              <span class="label">취소</span>
+              <span class="num"><b>0</b><span>건</span></span>
+            </li>
+            <li>
+              <span class="label">교환</span>
+              <span class="num"><b>0</b><span>건</span></span>
+            </li>
+            <li>
+              <span class="label">반품</span>
+              <span class="num"><b>0</b><span>건</span></span>
+            </li>
+          </ul>
+        </div>
+        <!-- // 진행 중인 주문 -->
+        
+        <!-- 최근 주문 정보 -->
+        <div class="data-top">
+          <h3 class="title-subject">최근 주문 정보</h3>
+          <span class="tit-sub">최근 30일 내에 주문하신 내역입니다.</span>
+          <div class="right">
+            <div class="view-more"><a href="javascript:void(0);" class="btn-view-more sm">더보기</a></div>
+          </div>
+        </div>
+        <table class="table-type1">
+          <colgroup>
+              <col style="width:150px">
+              <col style="width:auto">
+              <col style="width:140px">
+              <col style="width:140px">
+              <col style="width:140px">
+          </colgroup>
+          <thead>
+          <tr>
+              <th>날짜/주문번호</th>
+              <th>상품명/옵션</th>
+              <th>상품금액/수량</th>
+              <th>결제타입</th>
+              <th>주문상태</th>          
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                2024.07.10
+                <br>20242096-67936225
+              </td>
+              <td>비비고 순살고등어구이 60g 외 3건</td>
+              <td>30,100원<br>1개</td>
+              <td>카드결제</td>
+              <td>결제완료</td>
+            </tr>
+            <tr>
+              <td colspan="5">
+                <div class="no-data">조회내역이 없습니다.</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- // 최근 주문 정보 -->
+
+        <!-- 최근 본 상품 -->
+        <div class="data-top line-b">
+          <h3 class="title-subject">최근 본 상품</h3>
+          <span class="tit-sub">이재욱님께서 본 최근 상품입니다.</span>
+        </div>
+
+        <div class="product-slide-list" id="productSlide">
+          <button type="button" class="swiper-button-prev"></button>
+          <button type="button" class="swiper-button-next"></button>            
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="item-cont">
+                <div class="item-photo-box">
+                  <a href="javascript:void(0);">
+                    <img src="../images/temp/temp-product-1.jpg" alt="">
+                  </a>
+                  <div class="item-link">
+                    <button type="button"><i class="ico-favorite-white"></i></button>
+                    <button type="button"><i class="ico-cart-white"></i></button>
+                  </div>
+                </div>
+                <a href="javascript:void(0);" class="item_info_cont">
+                  <div class="item-tit-box">
+                    <strong class="item-name">트레비자몽300box 300ml*20</strong>
+                    <span class="item-name-sub">유료회원가 9,310원</span>
+                  </div>
+                  <div class="item-money-box">
+                    <span class="sale-rate"><span><b>46</b></span><em>%</em></span>
+                    <strong class="item-price">
+                      <span>9,800원</span>
+                    </strong>
+                    <span class="fixed-price">18,000원 </span>
+                  </div>
+                </a>
+                <!-- //item_info_cont -->
+              </div>
+            </div>
+            <!--  -->
+            <div class="swiper-slide">
+              <div class="item-cont">
+                <div class="item-photo-box">
+                  <a href="javascript:void(0);">
+                    <img src="../images/temp/temp-product-2.jpg" alt="">
+                  </a>
+                  <div class="item-link">
+                    <button type="button"><i class="ico-favorite-white"></i></button>
+                    <button type="button"><i class="ico-cart-white"></i></button>
+                  </div>
+                </div>
+                <a href="javascript:void(0);" class="item_info_cont">
+                  <div class="item-tit-box">
+                    <strong class="item-name">트레비자몽300box 300ml*20</strong>
+                    <span class="item-name-sub">유료회원가 9,310원</span>
+                  </div>
+                  <div class="item-money-box">
+                    <span class="sale-rate"><span><b>46</b></span><em>%</em></span>
+                    <strong class="item-price">
+                      <span>9,800원</span>
+                    </strong>
+                    <span class="fixed-price">18,000원 </span>
+                  </div>
+                </a>
+                <!-- //item_info_cont -->
+              </div>
+            </div>
+            <!--  -->
+            <div class="swiper-slide">
+              <div class="item-cont">
+                <div class="item-photo-box">
+                  <a href="javascript:void(0);">
+                    <img src="../images/temp/temp-product-3.jpg" alt="">
+                  </a>
+                  <div class="item-link">
+                    <button type="button"><i class="ico-favorite-white"></i></button>
+                    <button type="button"><i class="ico-cart-white"></i></button>
+                  </div>
+                </div>
+                <a href="javascript:void(0);" class="item_info_cont">
+                  <div class="item-tit-box">
+                    <strong class="item-name">트레비자몽300box 300ml*20</strong>
+                    <span class="item-name-sub">유료회원가 9,310원</span>
+                  </div>
+                  <div class="item-money-box">
+                    <span class="sale-rate"><span><b>46</b></span><em>%</em></span>
+                    <strong class="item-price">
+                      <span>9,800원</span>
+                    </strong>
+                    <span class="fixed-price">18,000원 </span>
+                  </div>
+                </a>
+                <!-- //item_info_cont -->
+              </div>
+            </div>
+            <!--  -->
+            <div class="swiper-slide">
+              <div class="item-cont">
+                <div class="item-photo-box">
+                  <a href="javascript:void(0);">
+                    <img src="../images/temp/temp-product-4.jpg" alt="">
+                  </a>
+                  <div class="item-link">
+                    <button type="button"><i class="ico-favorite-white"></i></button>
+                    <button type="button"><i class="ico-cart-white"></i></button>
+                  </div>
+                </div>
+                <a href="javascript:void(0);" class="item_info_cont">
+                  <div class="item-tit-box">
+                    <strong class="item-name">트레비자몽300box 300ml*20</strong>
+                    <span class="item-name-sub">유료회원가 9,310원</span>
+                  </div>
+                  <div class="item-money-box">
+                    <span class="sale-rate"><span><b>46</b></span><em>%</em></span>
+                    <strong class="item-price">
+                      <span>9,800원</span>
+                    </strong>
+                    <span class="fixed-price">18,000원 </span>
+                  </div>
+                </a>
+                <!-- //item_info_cont -->
+              </div>
+            </div>
+            <!--  -->
+            <div class="swiper-slide">
+              <div class="item-cont">
+                <div class="item-photo-box">
+                  <a href="javascript:void(0);">
+                    <img src="../images/temp/temp-product-3.jpg" alt="">
+                  </a>
+                  <div class="item-link">
+                    <button type="button"><i class="ico-favorite-white"></i></button>
+                    <button type="button"><i class="ico-cart-white"></i></button>
+                  </div>
+                </div>
+                <a href="javascript:void(0);" class="item_info_cont">
+                  <div class="item-tit-box">
+                    <strong class="item-name">트레비자몽300box 300ml*20</strong>
+                    <span class="item-name-sub">유료회원가 9,310원</span>
+                  </div>
+                  <div class="item-money-box">
+                    <span class="sale-rate"><span><b>46</b></span><em>%</em></span>
+                    <strong class="item-price">
+                      <span>9,800원</span>
+                    </strong>
+                    <span class="fixed-price">18,000원 </span>
+                  </div>
+                </a>
+                <!-- //item_info_cont -->
+              </div>
+            </div>
+            <!--  -->
+            <div class="swiper-slide">
+              <div class="item-cont">
+                <div class="item-photo-box">
+                  <a href="javascript:void(0);">
+                    <img src="../images/temp/temp-product-4.jpg" alt="">
+                  </a>
+                  <div class="item-link">
+                    <button type="button"><i class="ico-favorite-white"></i></button>
+                    <button type="button"><i class="ico-cart-white"></i></button>
+                  </div>
+                </div>
+                <a href="javascript:void(0);" class="item_info_cont">
+                  <div class="item-tit-box">
+                    <strong class="item-name">트레비자몽300box 300ml*20</strong>
+                    <span class="item-name-sub">유료회원가 9,310원</span>
+                  </div>
+                  <div class="item-money-box">
+                    <span class="sale-rate"><span><b>46</b></span><em>%</em></span>
+                    <strong class="item-price">
+                      <span>9,800원</span>
+                    </strong>
+                    <span class="fixed-price">18,000원 </span>
+                  </div>
+                </a>
+                <!-- //item_info_cont -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // product-slide-list -->
+        <!-- // 최근 본 상품 -->
+
+
+
+        
+      </main>
+      <!-- // content -->
+    </div>
+    <!-- // container -->
+
+    <script>
+      $.get("common/footer.html", function (data) {
+        $(data).appendTo(".wrap");
+      });
+    </script>
+  </div>
+  <!-- // wrap -->
+
+  <script>
+    basicSlide('#productSlide', {slidesPerView:4, spaceBetween:20, min:4})
+  </script>
+</body>
+</html>
